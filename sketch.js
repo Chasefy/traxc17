@@ -128,9 +128,7 @@ function draw() {
       gameOver.visible = true;
       restart.visible = true;
 
-      if(mousePressedOver(restart)) {
-        reset();
-      }
+      
      
      //change the trex animation
       trex.changeAnimation("collided", trex_collided);
@@ -146,7 +144,12 @@ function draw() {
     cloudsGroup.setLifetimeEach(-1);
      
      obstaclesGroup.setVelocityXEach(0);
-     cloudsGroup.setVelocityXEach(0);    
+     cloudsGroup.setVelocityXEach(0);
+     
+     if(mousePressedOver(restart)) {
+     reset();
+      }
+     
    }
   
  
